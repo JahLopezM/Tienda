@@ -1,0 +1,63 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+/* es el fondo y ubics*/
+.container {
+    height: 200vh;
+    width:100%;
+    background-image:url(../images/dcfac91e-c06e-4ecf-b429-f68f50061695.jpg);
+    background-position: center;
+   background-size: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    position:relative;
+    box-sizing: border-box;
+    position:relative;
+}
+.navbar {
+
+    height: 15vh;
+    width: 100%;
+    margin: auto;
+    display:flex;
+    align-items: center;
+}
+.Logo {
+    width: 160px;
+    cursor:pointer;
+}
+nav ul li{flex:1;
+padding-left: 60px;}
+
+/*se logran poner horizontales los titulos del we*/
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px
+    
+    
+}
+/*LAS COSAS SERAN DEFINIDAS CON . PERO ESTE PUNTO SERA SEGUIDO POR LA RAIZ LUEGO DE ETA RAIZ DEFINIMOS EL TIPO DE OBJETO QUE VAMOS A MODIFICAR EJEMPLO EL H1 O LISTAS ORDENADAS QUE TENGAMOS*/
+.content h1{
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    color:darkorchid;
+}
+.content p{
+    color: green;
+    font-size: 20px 
+}
+.feature-img{
+    height: 50%;
+    bottom:50px;
+    right: 160px;
+    position: absolute 
+}

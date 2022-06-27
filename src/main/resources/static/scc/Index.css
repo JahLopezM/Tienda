@@ -1,0 +1,38 @@
+
+.block{
+    background-color:red;
+    width: 200px;
+    height:200px;
+    padding:50px;
+    border:5px solid turquoise;
+    box-sizing: border-box;
+    margin: auto;
+    }
+    .static {
+        POSITION:STATIC;
+        border:3px SOLID green;
+        TOP:400PX;
+        LEFT:50PX;
+    }
+.relative {
+    Position:relative;
+    border:3px solid green;
+    top:400px;
+    left:50px;
+    width: 400px;
+    height: 500px;
+}
+.absolute {
+   Position:absolute;
+    border:3px solid green;
+    top:80px;
+    left:50px;
+    width: 200px;
+    height: 100px;
+}
+.fixed { 
+    Position:fixed;
+    border:3px solid green;
+    top:150px;
+    left:50px;
+}
