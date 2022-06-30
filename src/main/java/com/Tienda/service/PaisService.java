@@ -8,11 +8,13 @@ import com.Tienda.entity.Pais;
 import com.Tienda.repository.PaisRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Sky
  */
+@Service
 public class PaisService  implements IPaisService{
     
     
@@ -22,6 +24,6 @@ public class PaisService  implements IPaisService{
     @Override
     public List<Pais> listCountry() {
         return (List<Pais>)paisRepository.findAll();
-    }
+    } 
     
-}
+}  

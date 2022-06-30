@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
  *
  * @author Sky
  */
+
 @Service
 public class PersonaService implements IPersonaService{
     
@@ -38,4 +39,5 @@ public class PersonaService implements IPersonaService{
     public void delete (long id){
         personaRepository.deleteById(id);
     }
-}
+} 
+  
