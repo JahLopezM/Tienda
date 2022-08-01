@@ -29,6 +29,8 @@ public class PersonaController {
     
     @Autowired
     private IPaisService paisService;
+    
+    /*sirve para los url y hara todo lo que esta en este metodo*/
     @GetMapping("/persona")
     public String index(Model model) {
         List<Persona> listaPersona = personaService.getAllPersona();
@@ -39,6 +41,8 @@ public class PersonaController {
     /* Crear personas es un metodo igualitario*/
     /* Crear el service*/
     /* Cambiar todos los datos a el tipo que queremos encontrar */
+    
+    /*se debe pasar el nuevo objeto usar new*/
      @GetMapping("/personaN")
     public String CrearPersona(Model model) {
         List<Pais> ListaPaises = paisService.listCountry();
@@ -46,7 +50,7 @@ public class PersonaController {
         model.addAttribute("paises", ListaPaises);
         return "crear";
     }
-   
+   /*@model es para recibir del html */
       @PostMapping("/save")
     public String GuardarPersona (@ModelAttribute Persona persona ){
         personaService.savePersona(persona);
@@ -68,7 +72,7 @@ public class PersonaController {
     personaService.delete(idPersona);
     return "redirect:/persona";
     }
-    
+   
     
     
     

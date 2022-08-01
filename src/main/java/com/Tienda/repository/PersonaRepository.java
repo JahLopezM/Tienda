@@ -13,6 +13,7 @@ import org.springframework.stereotype.Repository;
  * @author Sky
  */
 @Repository
+/**damos el extends a Objeto,Tipo**/
 public interface PersonaRepository extends CrudRepository <Persona,Long>{
     
 } 

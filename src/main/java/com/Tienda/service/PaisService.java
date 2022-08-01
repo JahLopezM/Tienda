@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PaisService  implements IPaisService{
     
-    
+    /*Recordar poner el autowired ya que este no se agrega al poner los metodos*/
     @Autowired
     private PaisRepository paisRepository;
 

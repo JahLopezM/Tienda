@@ -15,29 +15,33 @@ import javax.persistence.Table;
  *
  * @author Sky
  */
+
+
 @Entity
-@Table(name = "paises")
-public class Pais implements Serializable {
+@Table(name="roles")
+ public class Roles implements Serializable   {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    /*Pongo las columnas*/
-    private long id;
-    private String pais;
+    private long id_rol;
     
     
-    
-    
-    /*Y sacamos los get set de todos sin encapsular*/
-    public long getId() {
-        return id;
+    private String nombre_rol;
+
+    public long getId_rol() {
+        return id_rol;
     }
-    public void setId(long id) {
-        this.id = id;
+
+    public void setId_rol(long id_rol) {
+        this.id_rol = id_rol;
     }
-    public String getPais() {
-        return pais;
+
+    public String getNombre_rol() {
+        return nombre_rol;
     }
-    public void setPais(String pais) {
-        this.pais = pais;
-    } 
+
+    public void setNombre_rol(String nombre_rol) {
+        this.nombre_rol = nombre_rol;
+    }
+   
 }
