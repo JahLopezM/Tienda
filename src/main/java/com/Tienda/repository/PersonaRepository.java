@@ -15,5 +15,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 /**damos el extends a Objeto,Tipo**/
 public interface PersonaRepository extends CrudRepository <Persona,Long>{
+    Persona findbyNombre (String nombre);
     
 } 

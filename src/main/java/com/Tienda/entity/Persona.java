@@ -5,6 +5,9 @@
 package com.Tienda.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -35,6 +38,15 @@ public class Persona implements Serializable {
     private String apellido2;
     private String telefono;
     private String email;
+    
+    
+    
+    /*Se agregaron las nuevas entidades de la tabla sql para generar las claves etc*/
+    
+    private String password;
+     private int active;
+      private String roles="";
+       private String permissions="";
 
     /*Se define que es de muchos a 1  esta es la llave foranea por lo que se define*/
     @ManyToOne
@@ -42,6 +54,38 @@ public class Persona implements Serializable {
     /*La tabla apunta a el objeto de tipo pais */
 
     private Pais pais;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
+    public String getPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(String permissions) {
+        this.permissions = permissions;
+    }
 
     /*se hacen los get y set*/
     public long getId() {
@@ -99,5 +143,30 @@ public class Persona implements Serializable {
     public void setPais(Pais pais) {
         this.pais = pais;
     }
+    
+    public List<String> getRoleList(){
+    if (this.roles.length() > 0){
+    return Arrays.asList(this.roles.split(","));
+    }
+    return new ArrayList<>();
+    }
+    
+        public List<String> getPermissionList(){
+    if (this.permissions.length() > 0){
+    return Arrays.asList(this.permissions.split(","));
+    }
+    return new ArrayList<>();
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }

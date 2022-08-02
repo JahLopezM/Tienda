@@ -14,5 +14,6 @@ public interface IPersonaService {
     public Persona getPersonaById (long id);
     public void savePersona (Persona persona);
     public void delete (long id);
+    public Persona findByNombre (String nombre);
      
 }

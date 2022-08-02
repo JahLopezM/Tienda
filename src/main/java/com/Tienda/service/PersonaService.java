@@ -39,5 +39,10 @@ public class PersonaService implements IPersonaService{
     public void delete (long id){
         personaRepository.deleteById(id);
     }
+
+    @Override
+    public Persona findByNombre(String nombre) {
+       return personaRepository.findbyNombre(nombre);
+    }
 } 
   

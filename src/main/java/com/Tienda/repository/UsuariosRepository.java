@@ -7,11 +7,13 @@ package com.Tienda.repository;
 
 import com.Tienda.entity.Usuarios;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Sky
  */
+@Repository
 public interface UsuariosRepository extends CrudRepository <Usuarios,Long>{
     
 } 
