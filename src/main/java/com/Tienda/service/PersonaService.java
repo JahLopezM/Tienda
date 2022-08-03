@@ -15,15 +15,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class PersonaService implements IPersonaService{
     
-    //Inyeccion dependencias para instanciar el persona repository y poder usar sus metodos escribir el autowired*/
+    //Inyeccion dependencias para instanciar el persona repository y poder usar sus metodos 
     @Autowired
     private PersonaRepository personaRepository;
-    /*devuelve o retorna los objetos de tipo persona y es casteado */
+    
     @Override
     public List<Persona> getAllPersona(){
         return (List<Persona>)personaRepository.findAll();
     }
-    /*obtenemos el metodo de sacar una persona objeto por el id */
+    
     @Override
     public Persona getPersonaById (long id){
         //Si no encuentra la persona retorne nulo
@@ -39,10 +39,8 @@ public class PersonaService implements IPersonaService{
     public void delete (long id){
         personaRepository.deleteById(id);
     }
-
-    @Override
-    public Persona findByNombre(String nombre) {
-       return personaRepository.findbyNombre(nombre);
+     @Override
+    public Persona findByNombre(String nombre){
+        return personaRepository.findByNombre(nombre);
     }
-} 
-  
+}

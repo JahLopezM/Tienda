@@ -12,9 +12,10 @@ import org.springframework.stereotype.Repository;
  *
  * @author Sky
  */
+
 @Repository
-/**damos el extends a Objeto,Tipo**/
-public interface PersonaRepository extends CrudRepository <Persona,Long>{
-    Persona findbyNombre (String nombre);
+public interface PersonaRepository extends CrudRepository<Persona,Long>{
+    Persona findByNombre(String nombre);
     
-} 
+   
+}
