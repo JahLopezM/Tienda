@@ -30,7 +30,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserService userDetailsService;
 
-    //Encripta la contrasena
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -44,16 +43,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
-        //SETTEAR EL TIPO DE ENCRIPTACION
+     
         daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
         daoAuthenticationProvider.setUserDetailsService(getUserService());
         return daoAuthenticationProvider;
     }
 
-    //Los bean es especifico para lo de configuration
-    // @Bean
-// es como el autowire que inyectaba dependencias, peeero inyectamos dependencias pero de configuracion que debe hacer el programa cuando se esta ejecutando
-    //que hago si la autenticacion fue exitosa
+  
     @Bean
     public AuthenticationSuccessHandler appAuthenticationSuccessHandler() {
         return new AppAuthenticationSuccessHandler();
